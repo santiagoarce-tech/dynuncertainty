@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynuncertainty"
+version = "0.1.0"
+authors = [
+    { name = "Santiago A. Arce", email = "santiago.arce@fcien.edu.uy" },
+]
+description = "Monte Carlo simulation and visualization of parametric uncertainty in dynamical systems."
+readme = "README.md"
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.10,<3.11",
+]
+
+[project.scripts]
+dynuncertainty = "dynuncertainty.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
